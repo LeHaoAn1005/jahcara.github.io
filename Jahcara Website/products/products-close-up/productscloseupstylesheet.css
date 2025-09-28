@@ -1,0 +1,136 @@
+/* Items Main */
+
+body {
+    background-color: #1a1a1a;
+}
+
+.items-main img {
+    height: 1000px;
+    width: auto;
+    margin-top: 50px;
+}
+
+.items-main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #1a1a1a;
+    position: relative;
+}
+
+#items-buying {
+    color: white;
+    margin-left: 80px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    max-width: 400px;
+    font-family: 'Times New Roman', serif;
+}
+
+.item-title {
+    font-size: 35px;
+    font-weight: bold;
+    letter-spacing: 1px;
+}
+
+.item-price {
+    font-size: 22px;
+    font-weight: 500;
+}
+
+/* Items Option */
+
+.item-options label {
+    margin-top: 10px;
+    font-size: 15px;
+}
+
+.item-options select,
+.item-options input {
+    padding: 10px;
+    width: 200px;
+    border: none;
+    border-bottom: 1px solid gray;
+    background: transparent;
+    color: white;
+    font-size: 15px;
+    outline: none;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.item-options option {
+    color: black;
+}
+
+#quantity {
+    display: flex;
+    flex-direction: row;
+}
+
+/* Button */
+
+.add-to-cart {
+    width: 250px;
+    padding: 12px;
+    border: none;
+    cursor: pointer;
+    font-size: 14px;
+    letter-spacing: 1px;
+    transition: transform 0.3s ease;
+    transform: scale(1);
+    border-radius: 5px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.add-to-cart {
+    background-color: white;
+    color: black;
+}
+
+.add-to-cart:hover {
+    transform: scale(0.95);
+}
+
+.item-description {
+    font-size: 14px;
+    line-height: 1.6;
+    opacity: 0.9;
+}
+
+/* Close Page Button */
+
+#close-button2 {
+    position: absolute;
+    top: 30px;
+    right: 50px;
+    border: 3px solid white;
+    border-radius: 50px;
+    background-color: white;
+    width: 45px;
+    height: 45px;
+    color: black;
+    font-size: 16px;
+    font-weight: 500;
+    text-align: center;
+    transition: transform 0.3s ease;
+    cursor: pointer;
+    margin-top: 100px;
+}
+
+#close-button2:hover {
+    transform: scale(0.85);
+}
+
+/* Animation */
+
+.items-main {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+.items-main.show {
+    opacity: 1;
+    transform: translateY(0px);
+}

@@ -1,0 +1,106 @@
+/* Main Section */
+
+#buyingintro-img {
+    width: 100%;
+    height: auto;
+    filter: brightness(70%);
+    transition: filter 0.6s ease; 
+    animation: zoomOut 1.0s ease-out forwards;
+    overflow: hidden;
+    overflow-x: hidden;
+    margin-top: 75px;
+}
+
+@keyframes zoomOut {
+    from {
+        transform: scale(1.2);
+    }
+    
+    to {
+        transform: scale(1);
+    }
+}
+
+#buyingintro-img.darker {
+    filter: brightness(20%);
+}
+
+#info-discover, 
+#info-discover-below, 
+#products-button, 
+#learn-more-button {
+    opacity: 0;
+    transform: translateY(30px); 
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#info-discover.show, 
+#info-discover-below.show, 
+#products-button.show, 
+#learn-more-button.show {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+/* Information */
+
+.buying-info {
+    background-color: black;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 40px;
+}
+
+#info-discover {
+    margin-top: 25px;
+    color: white;
+    font-size: 25px;
+}
+
+#info-discover-below {
+    margin-top: 20px;
+    font-size: 15px;
+    color: white;
+    font-weight: normal;
+}
+
+.buying-info-button {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+#products-button {
+    border: 3px solid white;
+    border-radius: 2px;
+    background-color: white;
+    width: 150px;
+    height: 50px;
+    font-size: 15px;
+    color: black;
+    font-family: 'Times New Roman', Times, serif;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#learn-more-button {
+    border: 3px solid white;
+    border-radius: 2x;
+    background-color: black;
+    width: 200px;
+    height: 50px;
+    font-size: 15px;
+    color: white;
+    font-family: 'Times New Roman', Times, serif; 
+    text-decoration: none;
+    font-weight: bold;
+}
+
+#products-button:hover, #learn-more-button:hover {
+    transform: scale(0.9);
+    cursor: pointer;
+}
+

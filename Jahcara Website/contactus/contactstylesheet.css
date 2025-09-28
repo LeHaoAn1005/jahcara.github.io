@@ -1,0 +1,206 @@
+/* Contact Form */
+
+#page-content {
+    background-color: black;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 20px;
+    box-sizing: border-box;
+}
+
+.main-section h1 {
+    color: white;
+    margin-top: 100px;
+    font-size: 50px;
+    text-align: center;
+    align-items: center;
+}
+
+.main-section p {
+    color: white;
+    margin-top: 25px;
+    text-align: center;
+    align-items: center;
+}
+
+#contact-form form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-top: 100px;
+    border: 2px solid white;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+#contact-form label {
+    color: white;
+    font-size: 25px;
+}
+
+#contact-form input[type="text"],
+#contact-form input[type="file"],
+#contact-form textarea,
+#contact-form select {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    outline: none;
+    background: #2a2a2a;
+    color: white;
+    font-size: 14px;
+    resize: none;
+    font-family: 'Times New Roman', Times, serif;
+    width: 100%;
+    height: 50px;
+}
+
+#contact-form input[type="submit"] {
+    font-family: 'Times New Roman', Times, serif;
+    font-weight: bolder;
+}
+
+#contact-form input[type="submit"]:hover {
+    transform: scale(0.95);
+}
+
+#contact-form select option {
+    color: #bbb;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#contact-form textarea {
+    height: 200px;
+}
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper select {
+    padding-right: 40px;
+    appearance: none;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 14px;
+    color: #bbb;
+    pointer-events: none;
+}
+
+#contact-form select option {
+    background: #2a2a2a;
+    color: white;
+}
+
+#contact-form input[type="text"]::placeholder,
+#contact-form textarea::placeholder {
+    color: #bbb;
+}
+
+/* Contact Form Submit */
+
+#submit-button {
+    padding: 12px;
+    border-radius: 6px;
+    border: none;
+    background-color: white;
+    color: black;
+    font-weight: bold;
+    font-size: 15px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+#submit-button:hover {
+    background-color: #f0f0f0;
+    transform: scale(1.05);
+}
+
+/* Contact Information */
+
+#contact-information {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    gap: 20px;
+    margin-top: 100px;
+    border: 2px solid white;
+    background-color: #1a1a1a;
+    border-radius: 12px;
+    padding: 30px 25px;
+    width: 100%;
+    max-width: 700px;
+    box-shadow: 0px 4px 12px rgba(255, 255, 255, 0.2);
+}
+
+/* Basic Information */
+
+#basic-information, #support-channels {
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    color: white;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+#basic-information h2 {
+    font-size: 40px;
+}
+
+#basic-information h3 {
+    margin-top: 25px;
+}
+
+#basic-information h3:hover {
+    opacity: 0.6;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+/* Support Channels */
+
+#support-channels {
+    flex-direction: row;
+    gap: 25px;
+}
+
+#support-channels img {
+    width: 50px;
+    height: auto;
+    transition: transform 0.6s ease;
+}
+
+#support-channels img:hover {
+    transform: scale(0.8);
+}
+
+/* Animation */
+
+#contact-us, #contact-us-information {
+    opacity: 0;
+    transform: translateY(40px);
+    transition: opacity 0.8s ease, transform 0.8s ease;
+}
+
+#contact-us.show, #contact-us-information.show {
+    opacity: 1;
+    transform: translateY(0px);
+}
